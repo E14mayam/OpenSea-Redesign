@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="90px" height="90px" viewBox="0 0 90 90" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path d="M0 0L90 0L90 90L0 90L0 0Z" id="path_1" />
+    <clipPath id="mask_1">
+      <use xlink:href="#path_1" />
+    </clipPath>
+  </defs>
+  <g id="Ethereum-icon">
+    <path d="M0 0L90 0L90 90L0 90L0 0Z" id="Background" fill="none" fill-rule="evenodd" stroke="none" />
+    <g clip-path="url(#mask_1)">
+      <path d="M20.625 45L46.875 3.75L73.125 45L46.875 60L20.625 45Z" id="Shape" fill="#9FA8DA" stroke="none" />
+      <path d="M46.875 3.75L73.125 45L46.875 60L46.875 3.75Z" id="Shape" fill="#7986CB" stroke="none" />
+      <path d="M20.625 50.625L46.875 65.625L73.125 50.625L46.875 86.25L20.625 50.625Z" id="Shape" fill="#9FA8DA" stroke="none" />
+      <path d="M46.875 65.625L73.125 50.625L46.875 86.25L46.875 65.625ZM20.625 45L46.875 33.75L73.125 45L46.875 60L20.625 45Z" id="Shape" fill="#7986CB" fill-rule="evenodd" stroke="none" />
+      <path d="M46.875 33.75L73.125 45L46.875 60L46.875 33.75Z" id="Shape" fill="#5C6BC0" stroke="none" />
+    </g>
+  </g>
+</svg>

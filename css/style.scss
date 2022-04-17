@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+$font-stack: 'Poppins', sans-serif;
+$primary-color: #0499f2;
+$secondary-color: #26f596;
+$color:#90ffcb;
+$alternate-color: #1aab68;
+$main-color: #13133a;
+$tetiary-color: #1b1b52;
+$font-color: #FFFFFF;
+
+@mixin link(){
+    padding: 10px 20px;
+    background: linear-gradient(to right, #26f596, #0499f2);
+    text-decoration: none;
+    border-radius: 40px;
+    font-size: 13px;
+    font-weight: 600;
+    color: $font-color;
+}
+
+
+*{
+    font-family: $font-stack;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $main-color;
+}
+
+header{
+    border-bottom: 1px solid $tetiary-color;
+    align-items: center;
+    h1{
+        font-size: 2rem;
+        color: $font-color;
+        font-weight: 700;
+        align-items: center;
+        cursor: pointer;
+    }
+    img{
+        width: 50px;
+    }
+    nav{
+        a{
+            text-decoration: none;
+            color: $font-color;
+            opacity: 0.5;
+            margin: 0 20px;
+            font-size: 17px;
+            font-weight: 500;
+            transition: 0.7s;
+            &:hover{
+                color: $alternate-color;
+                opacity: 1;
+            }
+        }
+    }
+    form{
+        padding: 10px 20px;
+        width: 400px;
+        background-color: $tetiary-color;
+        border-radius: 30px;
+        align-items: center;
+        input{
+            border: none;
+            outline: none;
+            width: 90%;
+            color: #1aab68;
+            background-color: $tetiary-color;
+            font-weight: 500;
+            padding-top: 3px;
+            &::placeholder{
+                color: $font-color;
+                opacity: 0.5;
+            }
+        }
+        img{
+            float: right;
+            width: 30px;
+            opacity: 0.5;
+        }
+    }
+    .wallet{
+        a{
+            img{
+                width: 40px;
+                opacity: 0.5;
+            }
+        }
+    }
+}
+
+.one{
+    height: 70vh;
+    width: 100%;
+    .one-img, .one-text{
+        flex-basis: 50%;
+    }
+    .one-img{
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+        align-items: center;
+        transition: all ease 0.8s;
+        img{
+            max-width: 450px;
+            border-radius: 30px;
+            box-shadow: 0px 0px 10px 2px $secondary-color;
+        }
+        h1{
+            color: $font-color;
+            padding-top: 10px;
+            cursor: pointer;
+        }
+        a{
+            text-decoration: none;
+        }
+        &:hover{
+            transform: perspective(800px) rotateX(30deg) rotateY(30deg) rotateZ(-20deg);  
+        }
+    }
+    .one-text{
+        h1{
+            font-size: 3rem;
+            color: $font-color;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        p{
+            color: $font-color;
+            opacity: 0.3;
+            padding: 20px 0px;
+        }
+        .one-links{
+            a{
+               @include link();
+            }
+            #second-link{
+                background: none;
+                border: 2px solid #26f5d3;
+            }
+        }
+
+    }
+    #first-link{
+        padding: 50px 0px 0px 0px;
+        color: $alternate-color;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 500;
+        img{
+            width: 40px;
+            border: 1px dashed $alternate-color;
+            padding: 10px 10px;
+            border-radius: 50%;
+            margin-right: 10px;
+            animation: spin infinite normal forwards;
+            animation-duration: 4s;
+        }
+    }
+}
+
+@keyframes spin {
+    0%{
+        transform: rotateZ(0deg);
+    }
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
+
+.two{
+    height: 100vh;
+    margin: 150px 0;
+    #drop-mt{
+        color: $font-color;
+        font-size: 2.5rem;
+        font-weight: 600;
+        padding-bottom: 40px;
+    }
+    .drops{
+        display: flex;
+        .drop-content{
+            img{
+                width: 400px;
+                height: 550px;
+                border-radius: 30px;
+                border: 2px solid $alternate-color;
+                transition: 0.7s;
+                &:hover{
+                    transform: translateY(5px);
+                }
+            }
+            h1{
+                padding-top: 20px;
+                color: $font-color;
+                font-size: 2rem;
+            }
+            p{
+                color: $font-color;
+                opacity: 0.5;
+            }
+            a{
+                @include link();
+                display: inline-block;
+                transition: 0.7s;
+                padding: 5px 15px;
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+
+.three{
+    align-items: center;
+    margin-bottom: 20px;
+    height: 100vh;
+    h1{
+        color: $font-color;
+        padding-bottom: 20px;
+        span{
+            color: $secondary-color;
+        }
+    }
+    ul{
+        grid-template-columns: 1fr 1fr;
+        row-gap: 30px;
+        column-gap: 30px;
+        list-style: none;
+        li{
+            display: flex;
+            align-items: center;
+            border: 1px dashed $tetiary-color;
+            border-radius: 10px;
+            padding: 10px 20px;
+            transition: 0.8s;
+            #token-img{
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+            }
+            h4{
+                font-size: 18px;
+                color: $font-color;
+                font-weight: 400;
+                padding: 0px 10px;
+                cursor: pointer;
+            }
+            #eth-img{
+                width: 20px;
+                padding-bottom: 10px;
+            }
+            h5{
+                font-size: 13px;
+                color: $font-color;
+                opacity: 0.5;
+                font-weight: 300;
+                cursor: pointer;
+            }
+            h6{
+                color: $secondary-color;
+                font-size: 13px;
+                padding: 0px 10px;
+                cursor: pointer;
+            }
+            &:hover{
+                background-color: $tetiary-color;
+            }
+            #fall{
+                color: rgb(192, 46, 46);
+            }
+        }
+    }
+    a{
+        @include link();
+        margin-top: 20px;
+        transition: 0.8s;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+}
+
+.four{
+    height: 100vh;
+    .four-text, .four-grid{
+        flex-basis: 50%;
+    }
+    .four-text{
+        align-items: center;
+        h1{
+            font-size: 3rem;
+            color: $font-color;
+            font-weight: 600;
+        }
+        a{
+            @include link();
+            background: none;
+            border: 2px solid #26f5d3;
+            margin-right: 250px;
+            margin-top: 50px;
+        }
+    }
+    .four-grid{
+        align-items: center;
+        ul{
+            grid-template-columns: 1fr 1fr;
+            list-style: none;
+            row-gap: 20px;
+            column-gap: 20px;
+            li{
+                width: 280px;
+                img{
+                    width: 50px;
+                    transition: 0.8s;
+                    &:hover{
+                        transform: rotateZ(-20deg);
+                    }
+                }
+                h1{
+                    font-size: 1.5rem;
+                    color: $font-color;
+                    padding: 20px 0px;
+                }
+                p{
+                    color: $font-color;
+                    opacity: 0.5;
+                    font-weight: 300;
+                    font-size: 15px;
+                }
+                a{
+                    text-decoration: none;
+                    color: $secondary-color;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+
+.five{
+    height: 100vh;
+    align-items: center;
+    h1{
+        font-size: 4rem;
+        color: $font-color;
+        font-weight: 600;
+    }
+    p{
+        color: $font-color;
+        opacity: 0.5;
+        padding: 30px 0px;
+        font-size: 2rem;
+    }
+    iframe{
+        height: 450px;
+        max-width: 800px;
+        border-radius: 20px;
+    }
+    a{
+        @include link();
+        transition: 0.8s;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+}
+
+.six{
+}
