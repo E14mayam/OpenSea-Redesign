@@ -214,8 +214,8 @@ header .wallet a img {
 }
 
 .two {
-  height: 100vh;
-  margin: 150px 0;
+  min-height: 100vh;
+  margin: 120px 0;
 }
 
 .two #drop-mt {
@@ -226,14 +226,18 @@ header .wallet a img {
 }
 
 .two .drops {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.two .drops .drop-content {
+  margin: 0 20px;
 }
 
 .two .drops .drop-content img {
-  width: 400px;
-  height: 550px;
+  max-width: 400px;
+  max-height: 550px;
   border-radius: 30px;
   border: 2px solid #1aab68;
   -webkit-transition: 0.7s;
@@ -281,7 +285,7 @@ header .wallet a img {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 20px;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .three h1 {
@@ -294,6 +298,8 @@ header .wallet a img {
 }
 
 .three ul {
+  display: -ms-grid;
+  display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   row-gap: 30px;
@@ -378,7 +384,7 @@ header .wallet a img {
 }
 
 .four {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .four .four-text,
@@ -421,6 +427,8 @@ header .wallet a img {
 }
 
 .four .four-grid ul {
+  display: -ms-grid;
+  display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   list-style: none;
@@ -521,6 +529,8 @@ header .wallet a img {
 }
 
 .six .patners {
+  display: -ms-grid;
+  display: grid;
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr;
   row-gap: 50px;
@@ -542,7 +552,7 @@ header .wallet a img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 60vh;
+  min-height: 60vh;
 }
 
 .seven .seven-text {
@@ -636,6 +646,7 @@ header .wallet a img {
 }
 
 .eight * ul li a {
+  margin-bottom: 5px;
   color: #ffffff;
   text-decoration: none;
   opacity: 0.3;
@@ -650,7 +661,12 @@ header .wallet a img {
   opacity: 1;
 }
 
-.eight .crypto-place, .eight .marketplace, .eight .resources, .eight .stats, .eight .my-account, .eight .company {
+.eight .crypto-place,
+.eight .marketplace,
+.eight .resources,
+.eight .stats,
+.eight .my-account,
+.eight .company {
   margin: 0 20px;
 }
 
@@ -685,7 +701,7 @@ header .wallet a img {
 }
 
 .nine h3 {
-  font-size: 1rem;
+  font-size: 10px;
   color: #ffffff;
   opacity: 0.3;
   font-weight: 300;
@@ -695,5 +711,189 @@ header .wallet a img {
   color: #ffffff;
   font-size: 10px;
   opacity: 0.3;
+}
+
+@media (max-width: 1300px) {
+  header h1 {
+    margin: 0 auto;
+  }
+  header nav,
+  header .wallet,
+  header form {
+    display: none;
+  }
+  .one-img img {
+    width: 400px;
+    margin-top: 30px;
+  }
+  .drop-content img {
+    height: 450px;
+    width: 300px;
+    margin-top: 10px;
+  }
+  .six .patners {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+  .six .patners a {
+    margin: 0 auto;
+  }
+  .six .patners a svg {
+    width: 150px;
+  }
+  .eight {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 1000px) {
+  .one {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100vh;
+    text-align: center;
+  }
+  .one .one-img {
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+  .one .one-img img {
+    width: 300px;
+  }
+  .one .one-text h1 {
+    font-size: 2rem;
+    padding-top: 20px;
+  }
+  .two #drop-mt {
+    font-size: 2rem;
+    margin-top: 50px;
+  }
+  .two .drops .drop-content img {
+    height: 300px;
+    width: 200px;
+    margin-top: 10px;
+  }
+  .two .drops .drop-content h1 {
+    font-size: 1.5rem;
+  }
+  .three h1 {
+    font-size: 2rem;
+    padding: 0px 10px;
+  }
+  .three ul {
+    padding: 10px 0px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .three ul li {
+    width: 300px;
+  }
+  .three ul li h4, .three ul li h5, .three ul li h6 {
+    font-size: 10px;
+  }
+  .four {
+    margin-top: 50px;
+  }
+  .four .four-text h1 {
+    font-size: 2rem;
+    padding: 0px 5px;
+  }
+  .four .four-text a {
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+  .four .four-grid ul {
+    padding-top: 20px;
+  }
+  .four .four-grid ul li {
+    width: 250px;
+  }
+  .five h1 {
+    font-size: 4rem;
+  }
+  .five p {
+    font-size: 25px;
+    text-align: center;
+  }
+  .five iframe {
+    width: 500px;
+    height: 300px;
+  }
+  .six .patners {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .seven .seven-img img {
+    width: 200px;
+  }
+}
+
+@media (max-width: 740px) {
+  .two .drops {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .two .drops .drop-content img {
+    height: 400px;
+    width: 280px;
+  }
+  .three ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .four {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .four .four-grid ul {
+    padding-top: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .five h1 {
+    font-size: 2rem;
+  }
+  .five p {
+    font-size: 15px;
+  }
+  .five iframe {
+    width: 300px;
+    height: 200px;
+  }
+  .seven {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .seven .seven-img {
+    display: none;
+  }
+}
+
+@media (max-width: 620px) {
+  .six .patners a svg {
+    width: 100px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
