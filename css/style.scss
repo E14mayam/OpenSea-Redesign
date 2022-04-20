@@ -710,6 +710,11 @@ header {
   }
   .seven{
     flex-direction: column;
+    .seven-text{
+      input{
+        width: 180px;
+      }
+    }
     .seven-img{
       display: none;
     }
@@ -719,6 +724,7 @@ header {
 @media(max-width: 620px){
   .six{
     .patners{
+      margin: 0 auto;
       a{
         svg{
           width: 100px;

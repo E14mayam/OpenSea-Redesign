@@ -886,12 +886,18 @@ header .wallet a img {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .seven .seven-text input {
+    width: 180px;
+  }
   .seven .seven-img {
     display: none;
   }
 }
 
 @media (max-width: 620px) {
+  .six .patners {
+    margin: 0 auto;
+  }
   .six .patners a svg {
     width: 100px;
   }
