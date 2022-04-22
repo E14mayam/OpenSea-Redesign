@@ -759,7 +759,7 @@ header .wallet a img {
     text-align: center;
   }
   .one .one-img {
-    margin-top: 0px;
+    margin-top: 40px;
     padding-top: 0px;
   }
   .one .one-img img {
@@ -835,6 +835,12 @@ header .wallet a img {
 }
 
 @media (max-width: 740px) {
+  header {
+    position: fixed;
+    width: 100%;
+    background-color: #13133a;
+    z-index: 2;
+  }
   .two .drops {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
